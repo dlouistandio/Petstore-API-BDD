@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Away": {
+      "type": "integer"
+    },
+    "sold": {
+      "type": "integer"
+    },
+    "string": {
+      "type": "integer"
+    },
+    "sold out": {
+      "type": "integer"
+    },
+    "pending": {
+      "type": "integer"
+    },
+    "available": {
+      "type": "integer"
+    },
+    "Not Available": {
+      "type": "integer"
+    },
+    "avaible": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "Away",
+    "sold",
+    "string",
+    "sold out",
+    "pending",
+    "available",
+    "Not Available",
+    "avaible"
+  ]
+}
