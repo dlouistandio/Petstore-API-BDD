@@ -1,9 +1,24 @@
-# Getting started with REST API testing with Serenity and Cucumber 6
+# Pet Store API Automation Testing
 
-This is a simple starter project for Serenity with Cucumber 6 and RestAssured
+Hello! This is a project API Automation with study case [Pet Store](https://petstore.swagger.io/#/) using Rest Assured and Serenity BDD
 
-## Want to learn more?
-For more information about Serenity BDD, you can read the [**Serenity BDD Book**](https://serenity-bdd.github.io/theserenitybook/latest/index.html), the official online Serenity documentation source. Other sources include:
-* **[Byte-sized Serenity BDD](https://www.youtube.com/channel/UCav6-dPEUiLbnu-rgpy7_bw/featured)** - tips and tricks about Serenity BDD
-* [**Serenity BDD Blog**](https://johnfergusonsmart.com/category/serenity-bdd/) - regular articles about Serenity BDD
-* [**The Serenity Dojo**](https://www.serenity-dojo.com) - Tailored BDD and Test Automation Training and Mentoring
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+What things you need to install:
+- [Java](https://www.oracle.com/id/java/technologies/downloads/)
+- [Maven](https://maven.apache.org/download.cgi)
+
+
+## Usage
+Change @TagName with the tag in this project, you can find it in features
+
+````bash
+mvn clean verify -Dcucumber.options="--tags @TagName"
+````
+
+## Report
+
+...
