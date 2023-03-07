@@ -11,7 +11,6 @@ public class StoreAPI {
     public static String POST_ORDER = Constant.BASE_URL + "/store/order";
     public static String GET_ORDER_WITH_ID = Constant.BASE_URL + "/store/order/{id}";
 
-    public static String GET_ALL = Constant.BASE_URL + "/store/{path}";
 
     @Step ("Post order for new pet")
     public void postOrder(File json){

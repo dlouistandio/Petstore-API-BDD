@@ -7,6 +7,7 @@ public class Constant {
     public static final String DIR = System.getProperty("user.dir");
     public static String JSON_REQUEST = DIR + "/src/test/resources/JSON/Request";
     public static String JSON_SCHEMA = DIR + "/src/test/resources/JSON/Schema";
+    public static String GET_ALL = Constant.BASE_URL + "/store/{path}";
 
     public static String STORE_ID = "id";
     public static String STORE_PET_ID = "petId";

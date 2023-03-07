@@ -7,6 +7,11 @@ Feature: Order Pet
     And Response body contains id 1 and pet id 1
     And Validate schema for Post Order Json
 
+   Scenario: Post order pet with invalid json
+     Given Post order with invalid json
+     When User send request post order
+     Then Should return status code 400
+
   Scenario: Get order pet with valid id
     Given Get pet order data with id 1
     When Get pet order request

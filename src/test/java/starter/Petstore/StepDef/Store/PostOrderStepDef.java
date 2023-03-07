@@ -30,11 +30,6 @@ public class PostOrderStepDef {
         SerenityRest.when()
                 .post(storeAPI.POST_ORDER);
     }
-
-    @Then("Should return status code {int}")
-    public void returnStatusCode(int statusCode){
-        SerenityRest.then().statusCode(statusCode);
-    }
     
     @And("Response body contains id {int} and pet id {int}")
     public void responseBodyContainsIdAndPetId(int id, int petId){
@@ -49,41 +44,9 @@ public class PostOrderStepDef {
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
     }
 
-    @Given("Get pet order data with id {int}")
-    public void getPetOrderData(int id) {
-        storeAPI.getOrder(id);
-    }
-
-
-    @When("Get pet order request")
-    public void getPetOrderRequest() {
-        SerenityRest.when().get(StoreAPI.GET_ORDER_WITH_ID);
-    }
-
-    @And("Validate schema for Get Order Json")
-    public void validateSchemaForGetOrderJson() {
-        File jsonSchema = new File(Constant.JSON_SCHEMA + "/GetOrderSchema.json");
-        SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
-    }
-
-    @And("Response body contains id {int}")
-    public void responseBodyContainsId(int id) {
-        SerenityRest.then().body(Constant.STORE_ID,equalTo(id));
-    }
-
-    @When("Get inventory data request")
-    public void getInventoryDataRequest() {
-        SerenityRest.when().get(StoreAPI.GET_ALL);
-    }
-
-    @And("Validate schema for Get inventory Json")
-    public void validateSchemaForGetInventoryJson() {
-        File jsonSchema = new File(Constant.JSON_SCHEMA + "/GetInventorySchema.json");
-        SerenityRest.then().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
-    }
-
-    @Given("Get inventory data with valid path {string}")
-    public void getInventoryDataWithValidPath(String path) {
-        storeAPI.getInventory(path);
+    @Given("Post order with invalid json")
+    public void postOrderWithInvalidJson() {
+        File json = new File(Constant.JSON_REQUEST + "/InvalidPostOrder.json");
+        storeAPI.postOrder(json);
     }
 }
