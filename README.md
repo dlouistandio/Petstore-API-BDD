@@ -6,6 +6,12 @@ Hello! This is a project API Automation with study case [Pet Store](https://pets
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+## Test Case
+....
+
+## Postman Test
+...
+
 ### Prerequisites
 What things you need to install:
 - [Java](https://www.oracle.com/id/java/technologies/downloads/)
